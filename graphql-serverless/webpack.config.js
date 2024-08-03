@@ -2,7 +2,7 @@ const path = require('path');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 module.exports = {
-  entry: './src/handler/graphqlHandler.ts', // Adjust to your actual entry file
+  entry: './srcgraphqlHandler.ts', // Adjust to your actual entry file
   target: 'node',
   mode: 'production',
   devtool: 'source-map',

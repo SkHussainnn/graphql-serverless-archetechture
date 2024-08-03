@@ -8,7 +8,7 @@ provider:
 
 functions:
   graphql:
-    handler: src/handlers/graphqlHandler.graphqlHandler
+    handler: src/graphqlHandler.graphqlHandler
     events:
     - http:
         path: graphql
