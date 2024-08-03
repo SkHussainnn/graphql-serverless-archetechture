@@ -1,0 +1,31 @@
+service: graphql-serverless
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  stage: dev
+  region: us-east-1
+
+functions:
+  graphql:
+    handler: src/handlers/graphqlHandler.graphqlHandler
+    events:
+    - http:
+        path: graphql
+        method: post
+
+plugins:
+- serverless-webpack
+- serverless-offline
+
+custom:
+  webpack:
+    webpackConfig: ./webpack.config.js
+    includeModules: true
+
+resources:
+  Resources:
+    GraphQLApi:
+      Type: AWS::ApiGateway::RestApi
+      Properties:
+        Name: GraphQL API

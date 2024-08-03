@@ -1,0 +1,4 @@
+node_modules/
+dist/
+.serverless/
+.serverless_plugins/
