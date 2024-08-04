@@ -2,7 +2,7 @@
   "name": "graphql-serverless",
   "version": "1.0.0",
   "description": "GraphQL serverless setup",
-  "main": "src/graphqlHandler.js",
+  "main": "src/graphqlHandler.ts",
   "scripts": {
     "build": "webpack",
     "deploy": "serverless deploy",
