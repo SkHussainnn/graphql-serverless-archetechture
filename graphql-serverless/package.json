@@ -4,25 +4,22 @@
   "description": "GraphQL serverless setup",
   "main": "src/graphqlHandler.ts",
   "scripts": {
-    "build": "webpack",
+    "build": "tsc",
     "deploy": "serverless deploy",
     "offline": "serverless offline"
   },
   "dependencies": {
-    "apollo-server-lambda": "^3.5.0",
-    "graphql": "^15.5.0"
+    "@apollo/server": "^4.10.5",
+    "aws-lambda": "^1.0.7",
+    "graphql": "^16.9.0"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.85",
-    "@types/node": "^16.11.12",
+    "@types/node": "^22.1.0",
+    "esbuild": "^0.14.0",
     "serverless": "^4.1.19",
-    "serverless-webpack": "^5.6.0",
-    "ts-loader": "^9.5.1",
-    "tsconfig-paths-webpack-plugin": "^3.5.2",
-    "typescript": "^4.4.3",
-    "webpack": "^5.93.0",
-    "webpack-cli": "^5.1.4",
-    "webpack-node-externals": "^3.0.0"
+    "serverless-offline": "^14.0.0",
+    "typescript": "^5.5.4"
   },
   "author": "",
   "license": "ISC"
