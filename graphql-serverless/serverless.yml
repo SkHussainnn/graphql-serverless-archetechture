@@ -10,18 +10,20 @@ functions:
   graphql:
     handler: src/graphqlHandler.graphqlHandler
     events:
-    - http:
-        path: graphql
-        method: post
+      - http:
+          path: graphql
+          method: post
+      - http:
+          path: users  # New GET endpoint path
+          method: get  # New GET method
+          cors: true   # Enable CORS if needed
 
 plugins:
-- serverless-webpack
-- serverless-offline
+  - serverless-offline  # Remove serverless-webpack
 
 custom:
-  webpack:
-    webpackConfig: ./webpack.config.js
-    includeModules: true
+  serverless-offline:
+    httpPort: 4000  # Custom port
 
 resources:
   Resources:
